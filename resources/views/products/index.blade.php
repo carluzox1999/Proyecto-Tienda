@@ -10,7 +10,7 @@
                 <div class="card">
                     <img src="{{ $product['image'] }}" class="card-img-top img-card">
                     <div class="card-body text-center">
-                        <a href="*** ENLACE A LA RUTA QUE MOSTRARÁ EL DETALLE DEL PRODUCTO ***"
+                        <a href="/products/{{ $product["id"] }}"
                             class="btn bg-primary text-white">{{ $product['name'] }}</a>
                     </div>
                 </div>

@@ -49,4 +49,12 @@ class ProductController extends Controller
         return view('products.index')->with("viewData", $viewData);
     }
 
+    function show($id) {
+        $this->insert();
+        $viewData = [];
+        $viewData["title"] = "Página principal - Tienda online";
+        $viewData["subtitle"] = "Los productos";
+        $viewData['product'] = ProductController::$products[$id];
+        return view('products.show')->with("viewData", $viewData);
+    }
 }
